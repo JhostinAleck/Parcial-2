@@ -1,0 +1,78 @@
+<style>
+.card-img-top {
+  max-width: 100%;
+  height: auto;
+}
+
+.jurassic-park-logo {
+  display: block;
+  margin: 0 auto; 
+  border-radius: 50%;
+  width: 150px; 
+  height: 150px; 
+  object-fit: cover; 
+}
+
+.count-text {
+  text-align: center;
+  margin-top: 10px; 
+  font-size: 1.25rem;
+  font-weight: bold; 
+}
+
+.container {
+  margin-top: 30px; 
+}
+
+.card {
+  margin-bottom: 20px; 
+}
+
+.card-body {
+  text-align: center; 
+}
+
+.card-title {
+  font-size: 1.2rem; 
+  margin-bottom: 15px; 
+}
+
+.card-text {
+  font-size: 0.9rem; 
+}
+
+@media (max-width: 768px) {
+  .col-sm-4 {
+    max-width: 100%; 
+    flex: 0 0 100%; 
+  }
+}
+
+</style>
+    
+<img src="https://raw.githubusercontent.com/2603-Uniandes/jsons/main/logo.webp" 
+     alt="Jurassic Park Logo" 
+     class="jurassic-park-logo img-fluid">
+
+<p class="count-text">Número total de carnívoros: {{ carnivoresCount }}</p>
+<p class="count-text">Número total de herbívoros: {{ herbivoresCount }}</p>
+<div class="container">
+    <div class="row">
+      <div class="col-sm-4" *ngFor="let dino of dinosaurios">
+        <div class="card">
+          <img class="card-img-top" [src]="dino.image" alt="{{ dino.name }}">
+          <div class="card-body">
+            <h5 class="card-title">{{ dino.name }}</h5>
+            <p class="card-text">{{ dino.shortDescription }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+
+
+  
+ 
+    

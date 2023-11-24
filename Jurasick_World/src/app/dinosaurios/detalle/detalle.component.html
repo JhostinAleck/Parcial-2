@@ -1,0 +1,21 @@
+<ng-container *ngIf="dino">
+    
+    <dl *ngIf="dino">
+        <dt>Nombre</dt>
+        <dd>{{ dino.name }}</dd>
+        <dt>Nombre Científico</dt>
+        <dd>{{ dino.scientificName }}</dd>
+        <dt>Alimentación</dt>
+        <dd>{{ dino.feeding }}</dd>
+        <dt>Era</dt>
+        <dd>{{ dino.era }}</dd>
+        <dt>País de Descubrimiento</dt>
+        <dd>{{ dino.discoveryCountry }}</dd>
+        <dt>Descripción</dt>
+        <dd>{{ dino.description }}</dd>
+    </dl>
+    <hr>
+    <img [src]="dino.image" alt="{{ dino.name }}">
+    
+    
+</ng-container>
